@@ -1,0 +1,109 @@
+/* 
+Theme Name: Hello Elementor Child for Vigor Branding
+Theme URI: https://github.com/elementor/hello-theme/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+/* use mobile style for all nav */
+
+/* hide traditional nav */
+.elementor-nav-menu--main.elementor-nav-menu__container.elementor-nav-menu--layout-horizontal {
+	display: none !important;
+}
+
+/* hide the standard elementor hamburger so it never displays before being removed with js on page load */
+.elementor-menu-toggle .eicon-menu-bar {
+	opacity: 0;
+}
+
+/* override mobile menu media rules */
+.elementor-nav-menu--dropdown-tablet .elementor-nav-menu--main, .elementor-nav-menu--dropdown-tablet .elementor-menu-toggle, .elementor-nav-menu--dropdown-tablet .elementor-nav-menu--dropdown {
+    display: block;
+}
+/* sub menus still start as hidden */
+.sub-menu.elementor-nav-menu--dropdown {
+	display: none;
+}
+.elementor-location-header .elementor-top-section {
+	background-color: #48003d;
+}
+/* center the menu hamburger */
+.elementor-57044 .elementor-element.elementor-element-2dcf56b1 .elementor-menu-toggle {
+    margin: 0 auto;
+}
+
+.elementor-menu-toggle.elementor-active .h-line-2, .elementor-menu-toggle.elementor-active:hover .h-line-2 {
+    opacity: 0;
+}
+
+.hamburger-line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    display: block;
+    margin: 5px auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.elementor-menu-toggle.elementor-active .h-line-1 {
+    -webkit-transform: translateY(5px) rotate(45deg);
+    -ms-transform: translateY(5px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
+}
+
+.elementor-menu-toggle:hover .h-line-2 {
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
+    opacity: 0.2;
+}
+
+.elementor-menu-toggle.elementor-active .h-line-3 {
+    -webkit-transform: translateY(-5px) rotate(-45deg);
+    -ms-transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+/* connect button, vertical alignment adjustment */
+.elementor-element.elementor-element-5a065ec {
+	margin-top: 11px;
+}
+
+/* reduce header button and menu icon size on phone sized devices */
+@media screen and (max-width: 600px) {
+	#project_inquiry_button {
+		font-size: 60%;
+		padding: 5px;
+	}
+	.elementor-menu-toggle i::before {
+		font-size: 70%;
+	}
+	.elementor-menu-toggle {
+		padding-bottom: 18px;
+	}
+}
+
+/* breadcrumb font size */
+.elementor-widget-ee-breadcrumbs {
+	font-size: 80%;
+}
+
+.elementor-element-4c57b96  ul.ee-breadcrumbs li.ee-breadcrumbs__item:first-of-type {
+	margin-left: 0;
+}
+
